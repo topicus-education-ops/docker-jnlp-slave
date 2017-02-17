@@ -26,7 +26,7 @@ MAINTAINER Nicolas De Loof <nicolas.deloof@gmail.com>
 ENV HOME /home/jenkins
 RUN addgroup -g 10000 jenkins && adduser -D -u 10000 -G jenkins -h $HOME jenkins jenkins
 
-ARG VERSION=2.62
+ARG VERSION=2.62.5
 
 RUN apk add --update --no-cache curl bash git \
   && curl --create-dirs -sSLo /usr/share/jenkins/slave.jar https://repo.jenkins-ci.org/public/org/jenkins-ci/main/remoting/${VERSION}/remoting-${VERSION}.jar \
