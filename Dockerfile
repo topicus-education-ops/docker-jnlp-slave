@@ -24,7 +24,7 @@ FROM openjdk:8-jdk-alpine
 MAINTAINER Nicolas De Loof <nicolas.deloof@gmail.com>
 
 ENV HOME /home/jenkins
-RUN adduser -S -h $HOME jenkins jenkins
+RUN addgroup -g 10000 jenkins && adduser -D -u 10000 -G jenkins -h $HOME jenkins jenkins
 
 ARG VERSION=2.62
 
